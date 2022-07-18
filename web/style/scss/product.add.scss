@@ -1,0 +1,463 @@
+html {
+    font-size: 1rem;
+}
+
+body {
+    margin: 0 auto;
+    font-family: Maven Pro;
+    background: #eff7fa;
+
+    nav {
+        width: 220px;
+        height: 100vh;
+        background: #fff;
+        color: #272727;
+        position: fixed;
+        margin: 0;
+        padding: 0;
+        color: #272727;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+
+    * {
+        list-style-type: none;
+        font-family: Maven Pro;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .list {
+        overflow: hidden;
+        background: #f2f2f2;
+        transition: all .2s;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding-inline-start: 3rem;
+            transition: all .2s;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover {
+                background: #ccc !important;
+                color: #272727;
+            }
+
+            &.on-page {
+                background: #f2f2f2;
+            }
+        }
+    }
+
+    .option {
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    li {
+        height: 48px;
+
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.view {
+    flex-grow: 1;
+    min-height: 100vh;
+    margin-left: 220px;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        object-fit: contain;
+        max-height: 30px;
+        max-width: auto;
+    }
+}
+
+.logo {
+    width: 100%;
+    height: 80px;
+    background: #fff;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo {
+        font-family: Montserrat Alternates;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url('../../assets/text-texture.jpg');
+        background-size: contain;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    .box {
+        padding: 2rem;
+        background: #fff;
+        box-sizing: border-box;
+    }
+
+    .box.preview {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    input, .image-label {
+        border: 1px solid #E4E4E4;
+        padding: 16px;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    .image-label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 1px dashed #E4E4E4;
+
+        img {
+            display: none;
+            object-fit: contain;
+            max-height: 100%;
+
+            @media all and (max-width: 1200px) {
+                display: block;
+            }
+        }
+
+        span {
+            @media all and (max-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .add {
+        display: flex;
+        gap: 3rem;
+
+        .col {
+            width: 100%;
+
+            p small {
+                color: red;
+            }
+        }
+
+        .col.preview {
+            width: auto;
+
+            @media all and (max-width: 1200px) {
+                display: none;
+            }
+
+        }
+
+        @media all and (max-width: 1200px) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.over {
+    border: 1px dashed #0cc5b7 !important;
+}
+
+.pre-ico {
+    width: 1rem;
+    height: 1rem;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #ff934b;
+    border: 2px solid #E4E4E4;
+}
+
+.product {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 6%);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 24px;
+    background: #fff;
+    position: relative;
+    max-width: 300px;
+
+    @media all and (max-width: 1200px) {
+        margin: 0 auto;
+    }
+
+    .sale-off {
+        display: none;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        background: #f2fef2 none repeat scroll 0 0;
+        border: 1px solid #4eda92;
+        border-radius: 2px;
+        color: #4eda92;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 10px;
+    }
+
+    .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+
+        button {
+            font-family: "Maven Pro";
+            width: 140px;
+            height: 35px;
+            border-radius: 49px;
+            margin: 0 auto;
+            border: none;
+            outline: none;
+            color: white;
+            background: linear-gradient(
+                135deg,
+                #ff934b 0%,
+                #ff5e62 100%
+                );
+            cursor: pointer;
+        }
+    }
+
+    .plus {
+        margin: 0 auto;
+        background: green;
+        max-width: 165px;
+        height: 45px;
+        background: #fff1f0;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .plus-ico {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            user-select: none;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: #ff934b;
+            }
+        }
+
+        .plus-ico.left {
+            left: 0;
+        }
+
+        .plus-ico.right {
+            right: 0;
+        }
+
+        input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+    }
+
+    .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            object-fit: cover;
+            transition: all 0.2s;
+            max-width: 100%;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .title {
+        text-align: center;
+        color: #0cc5b7;
+        font-weight: bolder;
+    }
+
+    h6 {
+        i {
+            color: #4eda92;
+        }
+
+        font-weight: bolder;
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        color: #9c9c9c;
+    }
+
+    .price {
+        text-align: center;
+
+        del {
+            font-size: 0.6rem;
+            color: #9c9c9c;
+            display: none;
+        }
+
+        bdi {
+            font-size: 0.8rem;
+            font-weight: bolder;
+        }
+    }
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"], input[type="date"] {
+    font-family: Maven Pro;
+}
+
+.add-product-button {
+    background: linear-gradient(135deg, #0cc5b7 0%, #2bd891 100%);
+    border: none;
+    margin-top: 18px;
+    width: 100%;
+    padding: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media all and (max-width: 1050px) {
+    .image {
+        max-width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col.col-resp {
+        flex-direction: row;
+        align-items: center;
+
+        & > small {
+            width: 250px;
+        }
+    }
+}
+
+nav.mobile {
+    display: none !important;
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    gap: 2px;
+    background: #f2f2f2;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    a {
+        background: #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #272727;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover i {
+            transform: scale(1.3);
+        }
+
+        i {
+            transition: all .1s;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .view {
+        margin: 0;
+    }
+
+    nav.mobile {
+        display: flex !important;
+    }
+}

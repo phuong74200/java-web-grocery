@@ -1,0 +1,179 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 3, 2022, 12:48:30 PM
+    Author     : phuon
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    min-height: 100%;
+    background: #eff7fa;
+    display: flex;
+    align-items: center;
+    font-family: Maven Pro;
+
+    .form.login {
+        width: 530px;
+    }
+
+    @media all and (max-width: 576px) {
+        background: #fff;
+        
+        form {
+            background: transparent;
+            box-shadow: none !important;
+        }
+    }
+
+    .form {
+        width: 1060px;
+        height: auto;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 6%);
+        padding: 48px;
+
+        .col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+
+            @media all and (max-width: 768px) {
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+
+            .row {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+    }
+
+    .logo {
+        font-family: Montserrat Alternates;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: url('../../assets/text-texture.jpg');
+        background-size: contain;
+        text-align: center;
+    }
+
+    .field {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 48px 1fr;
+
+        @media all and (max-width: 576px) {
+            grid-template-columns: 0px 1fr;
+            i {
+                display: none;
+            }
+            input {
+                padding: 4px 16px !important;
+            }
+        }
+
+        background: #f2f2f2;
+        border-radius: 4px;
+        overflow: hidden;
+
+        &>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            height: 48px;
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 4px;
+        }
+    }
+}
+
+small {
+    margin: 8px 0px;
+    display: block;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="date"], input[type="time"] {
+    font-family: Maven Pro;
+}
+
+.sign-up.google div {
+    background: #DB4437;
+    text-align: center;
+}
+
+.sign-up {
+    margin: 16px 0px;
+    width: 100%;
+    height: 100%;
+
+    button, div {
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 16px;
+        width: 100%;
+        border-radius: 4px;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: linear-gradient(135deg, #0cc5b7 0%, #2bd891 100%);
+    }
+}
+
+.middle-dash {
+    position: relative;
+    text-align: center;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 10%;
+        top: 50%;
+        left: 0;
+        transform: translateY(50%);
+        height: 1px;
+        background: #9c9c9c;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 10%;
+        top: 50%;
+        right: 0;
+        transform: translateY(50%);
+        height: 1px;
+        background: #9c9c9c;
+    }
+}

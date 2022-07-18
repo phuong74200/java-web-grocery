@@ -1,0 +1,293 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 9, 2022, 4:59:26 PM
+    Author     : phuon
+*/
+.logo {
+  font-family: Montserrat Alternates;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url("../../assets/text-texture.jpg");
+  background-size: contain;
+  text-align: center; }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+
+* {
+  box-sizing: border-box;
+  font-family: Maven Pro; }
+
+body, html {
+  min-height: 100vh; }
+
+div.row {
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px; }
+  @media all and (max-width: 768px) {
+    div.row {
+      display: none; } }
+
+@media all and (max-width: 768px) {
+  form.row {
+    grid-template-columns: 1fr 48px 48px 48px;
+    grid-template-rows: 1fr; }
+    form.row .image {
+      display: none; }
+    form.row .col.v-center.h-center {
+      display: none; }
+    form.row .remove {
+      display: block !important; }
+    form.row .plus-cont {
+      align-items: flex-end; }
+      form.row .plus-cont .plus {
+        width: auto;
+        display: block; }
+        form.row .plus-cont .plus .left, form.row .plus-cont .plus .right {
+          display: none; }
+        form.row .plus-cont .plus input {
+          width: 48px;
+          height: 48px; } }
+
+nav.mobile {
+  display: none !important;
+  width: 100%;
+  height: 60px;
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+  gap: 2px;
+  background: #f2f2f2;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
+  nav.mobile a {
+    background: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #272727;
+    text-decoration: none;
+    cursor: pointer; }
+    nav.mobile a:hover i {
+      transform: scale(1.3); }
+    nav.mobile a i {
+      transition: all .1s; }
+
+@media all and (max-width: 768px) {
+  nav.mobile {
+    display: flex !important; }
+
+  .container {
+    min-height: 100vh; } }
+@media all and (max-width: 768px) {
+  .final-row {
+    flex-direction: column; }
+    .final-row .g-recaptcha {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .final-row .total {
+      width: 100%; }
+    .final-row button {
+      width: 100% !important;
+      padding: 16px; } }
+
+body {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background: #EFF7FA;
+  flex-direction: column; }
+  @media all and (max-width: 980px) {
+    body {
+      display: block; } }
+
+.container {
+  margin: auto;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px;
+  background: #fff; }
+  @media all and (max-width: 980px) {
+    .container {
+      height: 100%;
+      width: 100%; } }
+
+.row {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 1fr 1fr 1fr 1fr;
+  background: #fff;
+  padding: 16px 0px;
+  gap: 16px; }
+
+img {
+  max-width: 120px;
+  max-height: 120px;
+  object-fit: contain;
+  padding: 16px; }
+
+.col.v-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+.col.h-center {
+  align-items: center; }
+.col.des {
+  gap: 8px; }
+  .col.des span {
+    font-size: 1rem;
+    font-weight: bold; }
+.col.remove button {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #ccc;
+  outline: none;
+  color: #272727;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .col.remove button i {
+    width: 0.5rem;
+    height: 0.5rem;
+    font-size: 0.5rem; }
+
+.plus {
+  width: 100px;
+  display: flex; }
+  .plus .plus-ico {
+    background: #272727;
+    color: #fff;
+    min-width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer; }
+  .plus input {
+    outline: none;
+    border-top: 2px solid #272727;
+    border-bottom: 2px solid #272727;
+    width: 48px;
+    text-align: center; }
+
+.final-row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  justify-content: flex-end; }
+  .final-row button {
+    outline: none;
+    border: none;
+    background: #272727;
+    color: #fff;
+    width: 150px; }
+
+.total {
+  padding: 16px;
+  width: 150px;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.no-product {
+  text-align: center; }
+
+nav {
+  width: 100%;
+  position: sticky;
+  height: 80px;
+  background: linear-gradient(135deg, #0cc5b7 0%, #2bd891 100%);
+  top: 0;
+  z-index: 10; }
+  nav a {
+    text-decoration: none; }
+  nav .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    max-width: 1140px;
+    padding: 0px;
+    background: transparent; }
+    nav .container .btns-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem; }
+    @media all and (max-width: 768px) {
+      nav .container {
+        grid-template-columns: 1fr; }
+        nav .container .logo-container, nav .container .btns-container {
+          display: none; } }
+
+.search-bar {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search-bar input {
+    border: 1px solid #E4E4E4;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 48px; }
+  .search-bar button {
+    padding: 16px;
+    border: none;
+    outline: none;
+    min-width: 80px;
+    height: 48px;
+    background: linear-gradient(135deg, #ff934b 0%, #ff5e62 100%);
+    box-sizing: border-box; }
+    .search-bar button img {
+      width: 16px;
+      height: 16px;
+      stroke: white;
+      fill: white; }
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+
+.button.round {
+  font-size: 1rem;
+  background: #fff none repeat scroll 0 0;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px 0 rgba(255, 97, 98, 0.46);
+  color: #000;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.button {
+  cursor: pointer; }
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background: #272727;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; }
+
+/*# sourceMappingURL=cart.css.map */

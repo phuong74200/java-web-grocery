@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 6, 2022, 10:40:18 PM
+    Author     : phuon
+*/
+
+.scrollbar-container {
+    position: fixed;
+    background: transparent;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 5px;
+
+    @media all and (max-width: 768px) {
+        bottom: 60px;
+    }
+}
+
+#scroll-bar {
+    min-height: 5px;
+    background: linear-gradient(135deg, #0cc5b7 0%, #2bd891 100%);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    display: none;
+}

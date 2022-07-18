@@ -1,0 +1,68 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 4, 2022, 10:26:56 PM
+    Author     : phuon
+*/
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    border: 1px solid #E4E4E4;
+    font-size: 13px;
+
+    &, * {
+        box-sizing: border-box;
+    }
+}
+
+.custom-select select {
+    display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+    color: #272727;
+    padding: 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border: 1px solid #E4E4E4;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #E4E4E4;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    div {
+        background: #fff;
+    }
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background: linear-gradient(135deg, #0cc5b7 0%, #2bd891 100%);
+}
